@@ -1,0 +1,27 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+               <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="label-control">Flight Name</label>
+                    <input type="text" class="form-control" name="flight_name" [(ngModel)]="flight_name">
+               </div>
+               <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="label-control">Origin</label>
+                    <input type="text" class="form-control" name="origin" [(ngModel)]="origin">
+               </div>
+               <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="label-control">Destination</label>
+                    <input type="text" class="form-control" name="dest" [(ngModel)]="dest">
+               </div>
+               <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+                    <label for="" class="label-control">Capacity</label>
+                    <input type="number" class="form-control" name="capacity" [(ngModel)]="capacity">
+               </div>
+               <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+                    <button class="btn btn-secondary" (click)="readValues()">Submit</button>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
