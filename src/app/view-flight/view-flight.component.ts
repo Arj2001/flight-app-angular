@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-flight',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewFlightComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myApi:ApiService) {
+    this.putFlightData()
+   }
 
-    flightData = [{"id":1,"flight_name":"AW1200","origin":"Kochi","dest":"Trivandrom","capacity":200},{"id":2,"flight_name":"LO142","origin":"Kochi","dest":"Qatar","capacity":250},{"id":3,"flight_name":"AI342","origin":"Mumbai","dest":"Banglore","capacity":150},{"id":4,"flight_name":"EM350","origin":"Dubai","dest":"JFK","capacity":300}]
+    putFlightData=()=>{
+      this.myApi.getFlightData().subscribe(
+        (data)=>{
+          this.flightData = data
+        }
+      )
+    }
+
+    flightData:any = []
 
   ngOnInit(): void {
   }

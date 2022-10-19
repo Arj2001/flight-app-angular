@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ViewFlightComponent } from './view-flight/view-flight.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 const addRoute :Routes = [
   {
@@ -29,7 +30,8 @@ const addRoute :Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(addRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
