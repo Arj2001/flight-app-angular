@@ -8,6 +8,7 @@
                         <th scope="col">Origin</th>
                         <th scope="col">Destination</th>
                         <th scope="col">Capacity</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -16,6 +17,7 @@
                         <td>{{i.origin}}</td>
                         <td>{{i.dest}}</td>
                         <td>{{i.capacity}}</td>
+                        <td><button class="btn btn-danger" (click)="deleteFlightData(i.id)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
